@@ -7,7 +7,8 @@ function handleResponseFromAPI(promise) {
     })
     .catch(() => {
       console.log('Got a response from the API'); // Log when the promise rejects
-      return new Error(); // Return empty Error object when the promise rejects
+       const n = new Error()
+      return n; // Return empty Error object when the promise rejects
     });
 }
 
