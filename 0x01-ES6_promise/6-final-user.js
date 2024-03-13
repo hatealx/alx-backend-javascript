@@ -9,15 +9,15 @@ export default function handleProfileSignup(firstName, lastName, fileName) {
   // Call signUpUser and push the result into the results array
   results.push(
     signUpUser(firstName, lastName)
-      .then(user => ({ status: 'fulfilled', value: user }))
-      .catch(error => ({ status: 'rejected', value: error }))
+      .then((user) => ({ status: 'fulfilled', value: user }))
+      .catch((error) => ({ status: 'rejected', value: error })),
   );
 
   // Call uploadPhoto and push the result into the results array
   results.push(
     uploadPhoto(fileName)
-      .then(photo => ({ status: 'fulfilled', value: photo }))
-      .catch(error => ({ status: 'rejected', value: error }))
+      .then((photo) => ({ status: 'fulfilled', value: photo }))
+      .catch((error) => ({ status: 'rejected', value: error })),
   );
 
   // Return a Promise that resolves when all promises are settled
