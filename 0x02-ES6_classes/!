@@ -8,7 +8,7 @@ export default class Building {
   }
 
   // Abstract method to be implemented by subclasses
-  static evacuationWarningMessage() {
+  evacuationWarningMessage() {
     throw new Error('Class extending Building must override evacuationWarningMessage');
   }
 }
